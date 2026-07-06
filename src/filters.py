@@ -36,7 +36,7 @@ def process_filters():
 
     create_directory("results")
 
-    image = load_image("images/persona.jpg")
+    image = load_image("images/laboratorio.png")
 
     brighter = adjust_brightness_contrast(image, beta=50)
 

@@ -35,7 +35,7 @@ def harris(
 def process_corners():
     create_directory("results")
 
-    image = load_image("images/persona.jpg")
+    image = load_image("images/laboratorio.png")
 
     gray = to_gray(image)
 

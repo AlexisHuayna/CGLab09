@@ -49,7 +49,7 @@ def apply_watermark(
 def process_watermark():
     create_directory("results")
 
-    image = load_image("images/persona.jpg")
+    image = load_image("images/laboratorio.png")
     watermark = load_image("images/unsa_logo.png")
 
     result = apply_watermark(image,watermark)

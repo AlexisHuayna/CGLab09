@@ -34,7 +34,7 @@ def apply_overlay(
 def process_overlay():
     create_directory("results")
 
-    background = load_image("images/persona.jpg")
+    background = load_image("images/laboratorio.png")
     foreground = load_image("images/unsa_logo.png")
 
     result = apply_overlay(background, foreground)

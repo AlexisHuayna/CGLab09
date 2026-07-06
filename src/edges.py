@@ -39,7 +39,7 @@ def sobel(image, kernel_size=3):
 def process_edges():
     create_directory("results")
 
-    image = load_image("images/persona.jpg")
+    image = load_image("images/laboratorio.png")
 
     gray = to_gray(image)
 
