@@ -1,4 +1,5 @@
 import numpy as np
+import cv2
 
 from src.threshold import binary_threshold
 from utils import (
@@ -6,11 +7,22 @@ from utils import (
     save_image,
     create_directory,
     to_gray,
-    create_kernel,
-    opening,
-    closing
+    create_kernel
 )
 
+def opening(image, kernel):
+    return cv2.morphologyEx(
+        image,
+        cv2.MORPH_OPEN,
+        kernel
+    )
+
+def closing(image, kernel):
+    return cv2.morphologyEx(
+        image,
+        cv2.MORPH_CLOSE,
+        kernel
+    )
 
 def add_salt_pepper_noise(
         image,
