@@ -57,3 +57,53 @@ def to_gray(image):
         image,
         cv2.COLOR_BGR2GRAY
     )
+
+def create_kernel(size=3):
+    return cv2.getStructuringElement(
+        cv2.MORPH_RECT,
+        (size, size)
+    )
+
+def opening(image, kernel):
+    return cv2.morphologyEx(
+        image,
+        cv2.MORPH_OPEN,
+        kernel
+    )
+
+def closing(image, kernel):
+    return cv2.morphologyEx(
+        image,
+        cv2.MORPH_CLOSE,
+        kernel
+    )
+
+def adjust_brightness_contrast(
+        image,
+        alpha=0.1,
+        beta=0
+    ):
+    return cv2.convertScaleAbs(
+        image,
+        alpha=alpha,
+        beta=beta
+    )
+
+def gaussian_blur(
+        image,
+        kernel_size=5
+    ):
+    return cv2.GaussianBlur(
+        image,
+        (kernel_size, kernel_size),
+        0
+    )
+
+def median_blur(
+        image,
+        kernel_size=5
+    ):
+    return cv2.medianBlur(
+        image,
+        kernel_size
+    )
